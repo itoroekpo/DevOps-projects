@@ -1,7 +1,7 @@
 # Web Stack Implementation (LEMP Stack) Project by Itoro Ekpo
 
-![cover](./img/cover.png
-)
+![cover](./img/cover.png)
+
 > The project LEMP Stack covers similar concepts as that of LAMP and helps to cement my skills of deploying web solutions using LA(E)MP stacks. In this project I will be implementing a similar stack, but with an alternative Web Server-_NGINX_, which is also very popular and widely used by many websites on the internet.
 
 **LEMP** deploys _Linux_, _NGINX_, _MySQL_ and _PHP_ to create dynamic and high-performing websites. We will dive into the architecture of the LEMP stack, understanding how Linux provides a solid foundation , Nginx serves as a powerful webserver, MySQL for the database and PHP empowering server-side functionality.
