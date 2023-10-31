@@ -1,6 +1,6 @@
-# DevOps-projects by Itoro Ekpo
+# DevOps Projects by Itoro Ekpo
 
-> I decided to follow my dream of diving into the wonderful world of Cloud DevOps on [Darey.io](https://www.darey.io)
+> Delving into the wonderful world of Cloud DevOps on [Darey.io](https://www.darey.io)
 
 > This repository will act as a primary repo for all my completed course projects for the entire program.
 
