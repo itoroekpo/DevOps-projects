@@ -1,4 +1,5 @@
 # LEMP-Stack Implementation Assignment by Itoro Ekpo
+![cover](./lemp_img/cover.png)
 
 > A short documentation of the assignment given to implement the LEMP-Stack deploying Nginx, MySQL and PHP on Ubuntu Linux OS EC2 instance on AWS.
 
