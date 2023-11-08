@@ -1,0 +1,3 @@
+## Load Balancing with Nginx
+
+In this project we will discover the art of [load-balancing](https://aws.amazon.com/what-is/load-balancing/#:~:text=Load%20balancing%20is%20the%20method,a%20fast%20and%20reliable%20manner.) with [Nginx](https://www.nginx.com/). Learn how to distribute traffic efficiently across multiple servers, optimize performance and ensure high availability for your web applications.
