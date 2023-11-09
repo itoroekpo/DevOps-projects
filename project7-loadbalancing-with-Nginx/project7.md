@@ -59,7 +59,8 @@ In this project we will be working you through how to configure Nginx as a load 
         ![A2_run](./img/3f.apache2_running.png)
 
 4. **Step 4**: Configure Apache to serve a page showing its public IP address.
-    * Configure Apache to serve content on port 8000
+    * Configure Apache to serve content on port 8000 `sudo vi /etc/apache2/ports.conf` 
+
 
         ![add_port_8000](./img/4a.port_8000_add.png)
 
