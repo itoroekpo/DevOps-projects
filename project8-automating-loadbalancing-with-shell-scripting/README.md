@@ -1,0 +1,3 @@
+## Automating Load Balancer configuration with shell scripting
+
+In this project we will streamline our load balancer configuration with ease using shell scripting and simple [CI/CD](https://www.redhat.com/en/topics/devops/what-is-ci-cd) on [Jenkins](https://www.jenkins.io/). This project will demonstrate how to automate the setup and maintenance of our load balancer using a freestyle job, enhancing efficiency and reducing manual effort.
