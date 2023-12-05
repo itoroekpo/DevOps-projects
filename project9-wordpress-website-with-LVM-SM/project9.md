@@ -236,7 +236,7 @@ sudo pvcreate /dev/xvdh1
 
 ![db11](./img/db11.png)
 
-**Step 15**: Create **/var/www/thml** directory to store website files
+**Step 15**: Create **/var/www/html** directory to store website files
 > `sudo mkdir -p /db`
 
 **Step 16**: Create **/home/recovery/logs** to store backup of log data

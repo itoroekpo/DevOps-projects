@@ -33,7 +33,7 @@ See the response from the remote server in the below output. You can see that th
 
 ![curl](./img/1.curl.png)
 
-_Another simple way to get a server's IP address is to use a simple diagnostic tool like `ping`, it will also show round-trip time for packets to go to and back from the server. This tool uses [ICMP](https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol) protocol.
+_Another simple way to get a server's IP address is to use a simple diagnostic tool like `ping`, it will also show round-trip time for packets to go to and back from the server. This tool uses [ICMP](https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol) protocol._
 
 ## Implementing a Client Server Architecture using MySQL Database Management System (DBMS)
 
