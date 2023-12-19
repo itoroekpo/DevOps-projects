@@ -401,6 +401,15 @@ So we should have the below in the `site.yml` file:
 ---
 Commit your changes, create a PULL Request and merge them to `main` branch, make sure webhook triggered two consequent Jenkins jobs, they ran successfully and copied all the files to our `Jenkins-Ansible` server via ssh-agent.
 
+GitHub Repo
+![github](./img/4a.github.png)
+
+upstream jenkins job - ansible
+![jenkins_ans](./img/4b.ansible_ans.png)
+
+downstream jenkins job - save_artifacts
+![jenkins_save](./img/4c.save_artifk.png)
+
 ```
 cd /home/ubuntu/ansible-config-mgt
 
