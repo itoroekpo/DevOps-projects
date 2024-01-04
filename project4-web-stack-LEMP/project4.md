@@ -39,7 +39,7 @@ Verify TCP port 80 is open
 Now we can test that our Nginx server can respond to requests from the internet by entering `http://<public-ip-address>:80` into a web browser.
 
 You can retrieve your public-ip-address from AWS or you can run the command below
-`curl -s http://169.254.169.254/latest/meta-data/public-ipv4`
+`curl -s http://169.254.169.254/latest/meta-data/public-ipv4` or `curl -s ifconfig.me`
 
 ![publicip](./img/6.public-ip.png)
 
@@ -176,11 +176,30 @@ Our new website is now active, but the web root _/var/www/projectLEMP_ is still 
 
 >`sudo echo 'Hello LEMP from hostname' $(curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/projectLEMP/index.html`
 
-9. Now go to your browser and try to open your website URL using your IP address or DNS-name. In my case `http://http://52.90.8.253/:80` OR `http://ec2-52-90-8-253.compute-1.amazonaws.com:80`
+9. Now go to your browser and try to open your website URL using your IP address or DNS-name. In my case `http://http://52.90.8.253:80` OR `http://ec2-52-90-8-253.compute-1.amazonaws.com:80`
 
 Below is a screnshot of the result as expected.
 
 ![echo-text](./img/13.echo-text.png)
+
+If you get a `401 Unauthorized Error` message then you are probably using the IMDSv2 - Instance Meta-Data Service Version 2. This requires you to retrieve a security token to access the meta-data service.
+
+You can retrieve a fresh token by running the below commands
+
+```
+# To retrieve token
+TOKEN=`curl -X PUT "http://169.254.169.254/latest/api/token" -H "X-aws-ec2-metadata-token-ttl-seconds: 21600"`
+
+# And use this token to retrieve meta-data profiles
+
+curl http://169.254.169.254/latest/meta-data/public-hostname -H "X-aws-ec2-metadata-token: $TOKEN"
+
+curl http://169.254.169.254/latest/meta-data/public-ipv4 -H "X-aws-ec2-metadata-token: $TOKEN"
+
+# So you will have to recreate your index.html file with the below command for IMDSv2:
+
+sudo echo 'Hello LEMP from hostname' $(curl http://169.254.169.254/latest/meta-data/public-hostname -H "X-aws-ec2-metadata-token: $TOKEN") 'with public IP' $(curl http://169.254.169.254/latest/meta-data/public-ipv4 -H "X-aws-ec2-metadata-token: $TOKEN") > /var/www/projectLEMP/index.html
+```
 
 You can leave this `index.html` file in place as a temporary landing page for your application until you setup an `index.php` file to replace it. Once you do that, remember to remove or rename the _index.html_ file from your document root, as it would take precedence over an _index.php_ file by default.
 
