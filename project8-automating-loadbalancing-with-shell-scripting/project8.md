@@ -1,4 +1,5 @@
 # Automating Load Balancer configuration with shell scripting By Itoro Ekpo
+
 ![cover](./img/cover.png)
 
 In the implementation of our Nginx load balancer, we deployed two backend servers with a load balancer distributing traffic across the webservers. We did this by typing commands right into our terminal.
@@ -59,21 +60,27 @@ sudo systemctl restart apache2
 ```
 
 **Step 1**: Provision an EC2 instance running ubuntu 22.04.
+
 ![EC2](./img/1a.instances_EC2.png)
 
 **Step 2**: Open port 8000 to allow traffic from anywhere using the security group.
+
 ![port_8000](./img/1b.sec_gr_8000.png)
 
 **Step 3**: Connect to the webserver via a terminal using SSH client.
+
 ![ssh](./img/3a.ssh.png)
 
 **Step 4**: Open a file, paste the script above and close the file using the command `sudo vi install.sh`
+
 ![innstall](./img/4a.prep_file.png)
 
 **Step 5**: Change the permission on the file to make it executable using the command `sudo chmod +x install.sh`
+
 ![chmod](./img/5a.chmod.png)
 
 **Step 6**: Run the script usinfg the command `./install.sh <PUBLIC_IP>`
+
 ![run](./img/6.run_script.png)
 
 _script run successfully and both webservers are now active running_
@@ -81,16 +88,20 @@ _script run successfully and both webservers are now active running_
 Both apache webservers are now serving webpages on the browser displaying their public IP addresses
 
 ![apache1](./img/6a.apache1.png)
+
 ![apache2](./img/6b.apache2.png)
 
 ## Deployment of Nginx as a Load Balancer using Shell Script
 Now we will automate the deployment of Nginx as a load balancer using a shell script. We will provision another EC2 instance running ubuntu 22.04, open port 80 to anywhere using security group and connect to the load balancer via the terminal.
+
 ![nginx_inst](./img/7a.nginx_inst.png)
 
 _port 80 opened in security group_
+
 ![port80](./img/7b.port_80.png)
 
 _EC2 instance for load balancer connected via ssh_
+
 ![ssh_nginx](./img/7c.ssh_nginx.png)
 
 _All the steps followed to implement load balancer with Nginx has been codified in the script below. Read the instructions carefully in the script to learn how to use it._
@@ -158,14 +169,17 @@ sudo systemctl restart nginx
 **Step 1**: On your terminal, open a file `nginx.sh` using the command `sudo vi nginx.sh`
 
 **Step 2**: Copy and paste the script inside the file
+
 ![prep_file2](./img/7d.prep_file.png)
 
 **Step 3**: Save and close the file. Type `"esc"` then `":wqa!"`
 
 **Step 4**: Change the permission of the file to make it an executable file using the command `sudo chmod +x nginx.sh`
+
 ![nchmod](./img/7e.nginx_chmod.png)
 
 **Step 5**: Run the script with the command `./nginx.sh PUBLIC_IP Webserver-1 Webserver-2`
+
 ![run_lb](./img/7f.run_lb.png)
 
 ## Verifying the setup
