@@ -1,4 +1,4 @@
-# AWS Networking Implementation (VPC, Subnets, Internet Gateways, NAT, Routing)
+# AWS Networking Implementation Project (VPC, Subnets, Internet Gateways, NAT, Routing) By Itoro Ekpo
 
 ![cover](./img/cover2.png)
 
