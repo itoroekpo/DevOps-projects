@@ -9,7 +9,7 @@
 1. I setup an [AWS](https://aws.amazon.com/) account and provisioned a virtual server instance with Ubuntu Server OS using _Elastic Compute Cloud (EC2)_
 
 ![setup-Linux-instance](./img/1.setupAWS.png)
-![](./img/1b.instance.png)
+![instnc](./img/1b.instance.png)
 
 2. I connected to my EC2 instance using _ssh_ with the below command: `ssh -i "itoro-web-server.pem" ubuntu@ec2-54-82-253-191.compute-1.amazonaws.com`
 
