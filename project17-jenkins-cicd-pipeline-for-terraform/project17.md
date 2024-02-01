@@ -140,11 +140,13 @@ Before we proceed to building our custom jenkins image for terraform, we will go
 
 7) Switch back to the Jenkins user `USER jenkins`. This switches back to the jenkins user, returning to a lower privilege level. This is a good security practice to minimize the risk of running processes as the root user within the container.
 
-Building and running the docker imago
+Building and running the docker image
 ---
 Let us remember our mission is to have a docker container running Jenkins, but also have terraform installed. Now let us build the docker image and run it for further configuration.
 
 Make sure that you are inside the folder containing the `Dockerfile`. This is generally referred to as the `Docker Build Context`. The build context is the set of files located in the specified directory or path when you build a Docker image using `docker build command`. The content of the build context is sent to the Docker daemon during the build process and it serves as the source for building the Docker image.
+
+run the command `sudo usermod -aG docker $USER` and reboot your instance.
 
 1) Build the custom jenkins image `docker build -t jenkins-server .`
 
@@ -386,6 +388,8 @@ _Pipeline run and console output_
 _Click on "Build now" for a second run and check the console output_
 
 _Show the plan and decide to proceed to apply or abort_
+
+![apply](./img/4d.apply_changes.png)
 
 ## The Jenkinsfile
 The Jenkinsfile pipeline automates the process of code checkout, planning infrastructure changes with Terraform, and conditionally applying those changes. It's designed to ensure that changes to infrastructure (managed by Terraform) are reviewed and applied systematically, with an additional manual check before applying changes to critical environments like production.
