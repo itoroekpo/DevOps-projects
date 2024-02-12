@@ -322,6 +322,10 @@ UUID=dfd3e909-2c71-481d-bc78-4f7fb69efc04 /var/log ext4 defaults 0 0
 
     ![wp1](./img/wp1.png)
 
+    edit the `wp-config.php` file and input the database credentials.
+
+    ![wpconfigphp](./img/wp-configphp.png)
+
 7. Configure SE Linux Policies
 
     ```
