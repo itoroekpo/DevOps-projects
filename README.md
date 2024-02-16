@@ -4,5 +4,5 @@
 
 > This repository will act as a primary repo for all my completed course projects for the entire program.
 
-> _You can connect with me on LinkedIn [ItoroEkpo](https://www.linkedin.com/in/itoro-michael-ekpo/)_
+> _You can connect with me on LinkedIn [Itoro Ekpo](https://www.linkedin.com/in/itoro-michael-ekpo/)_
 
