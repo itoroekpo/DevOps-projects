@@ -1,4 +1,4 @@
-## Monitoring Infrastructure in AWS (Cloudwatch, Cloudtrail)
+## Monitoring Infrastructure in AWS (Cloudwatch, Cloudtrail) By Itoro Ekpo
 
 ![cover](./img/cover.png)
 
